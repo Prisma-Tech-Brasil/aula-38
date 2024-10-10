@@ -1,7 +1,7 @@
 async function api(endPoint) {
   try {
     const resultado = await fetch(`http://localhost:3000/${endPoint}`);
-    const dados = resultado.json();
+    const dados = await resultado.json();
     return dados;
   } catch (error) {
     console.error(error);
